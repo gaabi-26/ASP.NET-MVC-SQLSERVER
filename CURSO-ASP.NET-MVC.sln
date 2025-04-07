@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacionAdmin", "CapaPresentacionAdmin\CapaPresentacionAdmin.csproj", "{A501CC24-E8EF-45F3-8A3B-2F3C87A02219}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacionTienda", "CapaPresentacionTienda\CapaPresentacionTienda.csproj", "{B0F162B0-FDBA-4C06-A728-9EF1A520934F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A501CC24-E8EF-45F3-8A3B-2F3C87A02219}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A501CC24-E8EF-45F3-8A3B-2F3C87A02219}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A501CC24-E8EF-45F3-8A3B-2F3C87A02219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F162B0-FDBA-4C06-A728-9EF1A520934F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F162B0-FDBA-4C06-A728-9EF1A520934F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F162B0-FDBA-4C06-A728-9EF1A520934F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F162B0-FDBA-4C06-A728-9EF1A520934F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
