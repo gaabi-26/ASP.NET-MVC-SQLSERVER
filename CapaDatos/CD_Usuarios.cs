@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using CapaEntidad;
 using System.Data.SqlClient;
 using System.Data;
+
 namespace CapaDatos
 {
     public class CD_Usuarios
@@ -18,7 +19,7 @@ namespace CapaDatos
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    string query = "select IdUsuarios, Nombres, Apellidos, Correos, Clave, Restableceer, Activo from usuario";
+                    string query = "select IdUsuario, Nombres, Apellidos, Correo, Clave, Reestablecer, Activo from USUARIO";
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
 
@@ -30,23 +31,24 @@ namespace CapaDatos
                         {
                             lista.Add(new Usuario()
                             {
-                                IdUsuario = Convert.ToInt32(dr["IdUsuarios"]),
+                                IdUsuario = Convert.ToInt32(dr["IdUsuario"]),
                                 Nombres = dr["Nombres"].ToString(),
                                 Apellidos = dr["Apellidos"].ToString(),
-                                Correo = dr["Correos"].ToString(),
+                                Correo = dr["Correo"].ToString(),
                                 Clave = dr["Clave"].ToString(),
-                                Reestablecer = Convert.ToBoolean(dr["Restableceer"]),
+                                Reestablecer = Convert.ToBoolean(dr["Reestablecer"]),
                                 Activo = Convert.ToBoolean(dr["Activo"])
                             });
                         }
                     }
-
                 }
             }
-            catch 
+            catch (Exception ex)
             {
+                Console.WriteLine("Error en Listar: " + ex.Message);
                 lista = new List<Usuario>();
             }
+
             return lista;
         }
     }
