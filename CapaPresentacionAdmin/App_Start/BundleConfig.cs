@@ -32,7 +32,7 @@ namespace CapaPresentacionAdmin
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       //"~/Content/bootstrap.css",
                       "~/Content/dataTables/css/jquery.dataTables.css",
-                      "~/Content/dataTables/css/responsive.dataTables  .css",
+                      "~/Content/dataTables/css/responsive.dataTables.css",
                       "~/Content/site.css"));
         }
     }
