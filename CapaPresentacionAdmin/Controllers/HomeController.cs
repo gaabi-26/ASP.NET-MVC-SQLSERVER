@@ -1,11 +1,11 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;   
 using System.Web.Mvc;
-
-using CapaEntidad;
-using CapaNegocio;
 
 namespace CapaPresentacionAdmin.Controllers
 {
@@ -26,6 +26,22 @@ namespace CapaPresentacionAdmin.Controllers
             return Json(new { data = oLista }, JsonRequestBehavior.AllowGet);
         }
 
+        [HttpPost]
+        public JsonResult GuardarUsuarios(Usuario objeto)
+        {
+            object resultado;
+            string mensaje = string.Empty;
+
+            if (objeto.IdUsuario == 0)
+            {
+                resultado = new CN_Usuarios().Registrar(objeto, out mensaje); // devuelve un int. Id de usuario
+            }
+            else
+            {
+                resultado = new CN_Usuarios().Editar(objeto, out mensaje); // devuelve un bool.
+            }
+            return Json(new { resultado = resultado, mensaje = mensaje }, JsonRequestBehavior.AllowGet);
+        }
         //public ActionResult About()
         //{
         //    ViewBag.Message = "Your application description page.";

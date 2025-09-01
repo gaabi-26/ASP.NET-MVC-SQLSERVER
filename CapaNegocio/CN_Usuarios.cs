@@ -32,13 +32,14 @@ namespace CapaNegocio
             {
                 Mensaje = "El correo del usuario no puede estar vacío.";
             }
-            if (string.IsNullOrEmpty(obj.Clave) || string.IsNullOrWhiteSpace(obj.Clave))
-            {
-                Mensaje = "La clave del usuario no puede estar vacía.";
-            }
+            //if (string.IsNullOrEmpty(obj.Clave) || string.IsNullOrWhiteSpace(obj.Clave))
+            //{
+            //    Mensaje = "La clave del usuario no puede estar vacía.";
+            //}
             if (string.IsNullOrEmpty(Mensaje))
             {
-                obj.Clave = CN_Recursos.EncriptarClave(obj.Clave);
+                string clave = "test123";
+                obj.Clave = CN_Recursos.EncriptarClave(clave);
                 return objUsuario.Registrar(obj, out Mensaje);
             }
             else
@@ -62,10 +63,10 @@ namespace CapaNegocio
             {
                 Mensaje = "El correo del usuario no puede estar vacío.";
             }
-            if (string.IsNullOrEmpty(obj.Clave) || string.IsNullOrWhiteSpace(obj.Clave))
-            {
-                Mensaje = "La clave del usuario no puede estar vacía.";
-            }
+            //if (string.IsNullOrEmpty(obj.Clave) || string.IsNullOrWhiteSpace(obj.Clave))
+            //{
+            //    Mensaje = "La clave del usuario no puede estar vacía.";
+            //}
             if (string.IsNullOrEmpty(Mensaje))
             {
                 return objUsuario.Editar(obj, out Mensaje);
