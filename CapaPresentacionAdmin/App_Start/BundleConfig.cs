@@ -16,6 +16,7 @@ namespace CapaPresentacionAdmin
                         "~/Scripts/DataTables/jquery.dataTables.js",
                         "~/Scripts/DataTables/dataTables.responsive.js",
                         "~/Scripts/fontawesome/all.min.js",
+                        "~/Scripts/sweetalert.min.js",
                         "~/Scripts/loadingoverlay/loadingoverlay.min.js"));
 
 
@@ -34,6 +35,7 @@ namespace CapaPresentacionAdmin
                       //"~/Content/bootstrap.css",
                       "~/Content/dataTables/css/jquery.dataTables.css",
                       "~/Content/dataTables/css/responsive.dataTables.css",
+                      "~/Content/sweetalert.css",
                       "~/Content/site.css"));
         }
     }
